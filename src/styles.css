@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ink: #17211e;
+  --color-forest: #0d2924;
+  --color-pine: #174c3f;
+  --color-mint: #dff3e9;
+  --color-canvas: #f4f4ee;
+  --color-paper: #fffef9;
+  --color-coral: #e96d51;
+  --color-gold: #d6a84b;
+  --font-sans: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  --font-display: Georgia, "Times New Roman", serif;
+  --shadow-card: 0 10px 30px rgba(13, 41, 36, 0.08);
+}
+
+:root {
+  color: #17211e;
+  background: #f4f4ee;
+  font-family: "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input, select, textarea { font: inherit; }
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.card {
+  background: #fffef9;
+  border: 1px solid rgba(13, 41, 36, 0.09);
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(13, 41, 36, 0.06);
+}
+
+.field {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid #d8dbd3;
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 0.7rem 0.85rem;
+  color: #17211e;
+  outline: none;
+  transition: border-color .15s, box-shadow .15s;
+}
+.field:focus {
+  border-color: #174c3f;
+  box-shadow: 0 0 0 3px rgba(23, 76, 63, .12);
+}
+.field::placeholder { color: #929b95; }
+textarea.field { min-height: 108px; resize: vertical; }
+
+.btn-primary {
+  min-height: 46px;
+  border-radius: .8rem;
+  background: #174c3f;
+  color: white;
+  font-weight: 700;
+  padding: .7rem 1.1rem;
+  transition: transform .15s, background .15s;
+}
+.btn-primary:hover { background: #0d2924; }
+.btn-primary:active { transform: scale(.98); }
+.btn-primary:disabled { opacity: .5; cursor: not-allowed; }
+
+.btn-secondary {
+  min-height: 44px;
+  border: 1px solid #ccd3ce;
+  border-radius: .8rem;
+  background: #fffef9;
+  color: #174c3f;
+  font-weight: 700;
+  padding: .65rem 1rem;
+}
+
+.eyebrow {
+  color: #61706a;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.animate-in {
+  animation: enter .35s ease-out both;
+}
+@keyframes enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
